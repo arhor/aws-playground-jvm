@@ -11,12 +11,12 @@ import java.util.Map;
 @Introspected
 public class ScheduledEvent {
 
-    private String account;
-    private String region;
-    private Map<String, Object> detail;
-    private String detailType;
-    private String source;
     private String id;
+    private String region;
+    private String source;
+    private String account;
+    private String detailType;
     private ZonedDateTime time;
     private List<String> resources;
+    private Map<String, Object> detail;
 }
