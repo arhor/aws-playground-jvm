@@ -4,6 +4,7 @@ pluginManagement {
 
         // @formatter:off
         id("com.github.johnrengelman.shadow") version prop("versions.gradle-shadow-plugin")
+        id("io.micronaut.library")            version prop("versions.micronaut-plugin")
         // @formatter:on
     }
 }
@@ -11,3 +12,4 @@ pluginManagement {
 rootProject.name = "aws-playground-jvm-samples"
 
 include(":apps:simple-scheduled-event-handler")
+include(":apps:simple-scheduled-event-handler-micronaut")
