@@ -4,9 +4,12 @@ plugins {
 }
 
 java {
-    project.property("versions.java")!!.let(JavaVersion::toVersion).let {
-        sourceCompatibility = it
-        targetCompatibility = it
+    toolchain {
+        languageVersion.set(
+            property("versions.java")
+                .let { it.toString() }
+                .let { JavaLanguageVersion.of(it) }
+        )
     }
 }
 
